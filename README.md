@@ -68,7 +68,7 @@ var sliderSetting = new SliderSetting
 settings.AddSetting(sliderSetting);
 
 // Register settings with the manager
-VMM.Core.ModManager.Instance.RegisterSettings(Assembly.GetExecutingAssembly(), settings);
+VMM.ModRegistry.ModManager.Instance.RegisterSettings(Assembly.GetExecutingAssembly(), settings);
 ```
 
 
