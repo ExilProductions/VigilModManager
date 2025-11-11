@@ -1,17 +1,17 @@
 # VigilModManager
 
-A MelonLoader mod manager for the game Vigil that provides an in-game interface for managing loaded mods and their settings.
+**W.I.P**
 
-## Technical Details
+A mod manager for the game Vigil that provides an in-game interface for managing loaded mods and their settings.
 
-The mod is built using Melonloader 7.1
+*The mod is built using Melonloader 7.1*
 
 
 ## Installation
 
 1. Install MelonLoader for Vigil if not already installed
-2. Place `VigilModManager.dll` in the `Mods` folder of your Vigil installation
-3. Launch the game - the mod will automatically initialize and add a "Mods" button to the main menu
+2. Place `VigilModManager.dll` from releases in the `Mods` folder of your Vigil installation
+3. After launching the game the mod will automatically initialize and add a "Mods" button to the main menu
 
 ## Usage
 
@@ -70,6 +70,7 @@ VMM.Core.ModManager.Instance.RegisterSettings(Assembly.GetExecutingAssembly(), s
 ### Building
 
 1. Set the `VIGIL_GAME_DIR` environment variable to your Vigil installation directory
+    - Example: `setx VIGIL_GAME_DIR "E:\Steam\steamapps\common\Vigil"`
 2. Build the project using Visual Studio or `dotnet build`
 3. The post-build event automatically copies the compiled DLL to the game's Mods folder
 
