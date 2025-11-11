@@ -15,11 +15,26 @@ namespace VMM
 {
     internal class Core : MelonMod
     {
-        public static MelonLogger.Instance Logger { get; private set; }
+        public static MelonLogger.Instance Logger
+        {
+            get
+            {
+                if (_logger != null)
+                {
+                    return _logger;
+                }
+                else
+                {
+                    throw new System.Exception("Logger instance is not initialized yet.");
+                }
+            }
+        }
+
+        private static MelonLogger.Instance _logger;
 
         public override void OnInitializeMelon()
         {
-            Logger = LoggerInstance;
+            _logger = LoggerInstance;
             LoggerInstance.Msg("Initialized.");
         }
 
