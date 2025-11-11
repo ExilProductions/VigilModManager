@@ -8,7 +8,7 @@ using VMM.ModRegistry.Settings;
 using VMM.ModRegistry.Settings.Types;
 using VMM.UI;
 
-[assembly: MelonInfo(typeof(VMM.Core), ModInfo.Name, ModInfo.Version, ModInfo.Author, null)]
+[assembly: MelonInfo(typeof(VMM.Core), ModInfo.Name, ModInfo.Version, ModInfo.Author, ModInfo.DownloadLink)]
 [assembly: MelonGame("Singularity Studios", "Vigil")]
 
 namespace VMM
