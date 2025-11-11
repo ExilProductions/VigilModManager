@@ -2,12 +2,13 @@
 using System.Collections;
 using System.Reflection;
 using UnityEngine;
+using VMM;
 using VMM.ModRegistry;
 using VMM.ModRegistry.Settings;
 using VMM.ModRegistry.Settings.Types;
 using VMM.UI;
 
-[assembly: MelonInfo(typeof(VMM.Core), "VigilModManager", "1.0.0", "Exil_S", null)]
+[assembly: MelonInfo(typeof(VMM.Core), ModInfo.Name, ModInfo.Version, ModInfo.Author, null)]
 [assembly: MelonGame("Singularity Studios", "Vigil")]
 
 namespace VMM
@@ -45,7 +46,7 @@ namespace VMM
 
         private void SetupModLoading()
         {
-            ModManager.Instance.onFinishedLoading += OnLoadedMods;
+            //ModManager.Instance.onFinishedLoading += OnLoadedMods;
             ModManager.Instance.LoadMods();
         }
 
@@ -53,23 +54,23 @@ namespace VMM
         {
             if (ModManager.Instance != null)
             {
-                ModManager.Instance.onFinishedLoading -= OnLoadedMods;
+                //ModManager.Instance.onFinishedLoading -= OnLoadedMods;
             }
         }
 
         //test setting for testing
-        private void OnLoadedMods()
-        {
-            var settings = new ModSettings();
-            var testToggle = new ToggleSetting
-            {
-                Name = "Test Toggle",
-                Value = true,
-                OnChanged = value => LoggerInstance.Msg($"Test Toggle pressed! State {value}")
-            };
-            settings.AddSetting(testToggle);
-
-            ModManager.Instance.RegisterSettings(Assembly.GetExecutingAssembly(), settings);
-        }
+        //private void OnLoadedMods()
+        //{
+        //    var settings = new ModSettings();
+        //    var testToggle = new ToggleSetting
+        //    {
+        //        Name = "Test Toggle",
+        //        Value = true,
+        //        OnChanged = value => LoggerInstance.Msg($"Test Toggle pressed! State {value}")
+        //    };
+        //    settings.AddSetting(testToggle);
+        //
+        //    ModManager.Instance.RegisterSettings(Assembly.GetExecutingAssembly(), settings);
+        //}
     }
 }
