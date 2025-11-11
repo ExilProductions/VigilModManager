@@ -9,6 +9,6 @@ namespace VMM
         public const string Name = "VigilModManager";
         public const string Version = "1.0.0";
         public const string Author = "Exil_S";
-        public const string DownloadLink = "https://github.com/ExilProductions/VigilModManager/releases";
+        public const string DownloadLink = "https://github.com/ExilProductions/VigilModManager";
     }
 }

@@ -6,6 +6,13 @@ A mod manager for the game Vigil that provides an in-game interface for managing
 
 *The mod is built using Melonloader 7.1*
 
+## Showcase
+
+### Mod Button in Main Menu
+![Mod Button](Assets/ModButton.PNG)
+
+### Mod Management Interface
+![Mod Menu](Assets/ModMenu.PNG)
 
 ## Installation
 
