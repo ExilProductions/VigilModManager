@@ -77,7 +77,7 @@ VMM.ModRegistry.ModManager.Instance.RegisterSettings(Assembly.GetExecutingAssemb
 ### Building
 
 1. Set the `VIGIL_GAME_DIR` environment variable to your Vigil installation directory
-    - Example: `setx VIGIL_GAME_DIR "E:\Steam\steamapps\common\Vigil"`
+    - Example Windows: `setx VIGIL_GAME_DIR "E:\Steam\steamapps\common\Vigil"`
 2. Build the project using Visual Studio or `dotnet build`
 3. The post-build event automatically copies the compiled DLL to the game's Mods folder
 
