@@ -391,8 +391,16 @@
 		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 	</PropertyGroup>
-	
+
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;$(VIGIL_GAME_DIR)\Mods&quot;" />
+
+		<!-- Windows -->
+		<Exec Condition="'$(OS)' == 'Windows_NT'"
+			  Command="copy &quot;$(TargetPath)&quot; &quot;$(VIGIL_GAME_DIR)\Mods&quot;" />
+
+		<!-- Linux/Mac -->
+		<Exec Condition="'$(OS)' != 'Windows_NT'"
+			  Command="cp &quot;$(TargetPath)&quot; &quot;$(VIGIL_GAME_DIR)/Mods&quot;" />
 	</Target>
+
 </Project>
