@@ -81,6 +81,9 @@ VMM.ModRegistry.ModManager.Instance.RegisterSettings(Assembly.GetExecutingAssemb
 2. Build the project using Visual Studio or `dotnet build`
 3. The post-build event automatically copies the compiled DLL to the game's Mods folder
 
+### Need help, suggest a feature or found a bug?
+Open up a issue and tag it with the fitting tags
+
 ## License
 
 This project is licensed under the Apache License 2.0. See LICENSE.txt for the full license text.
